@@ -1,0 +1,5 @@
+[run]
+include = direct_mail/*
+omit = *migrations*, *tests*
+plugins =
+    django_coverage_plugin
