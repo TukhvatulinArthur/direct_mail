@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% load i18n %}
+
+{% block content %}
+  <hr>
+  <h2>Выберите тип рассылки</h2>
+
+  {% for delivery_type in  delivery_type_list %}
+    <a href={% url "delivery_letter:delivery" %}>
+      <div class="row1">
+        <p>{{ delivery_type.name }}</p>
+      </div>
+    </a>
+    <p>{{ delivery_type.description }}, {% trans "price" %}:{{ delivery_type.price }}</p>
+    <hr>
+  {% endfor %}
+
+{% endblock %}

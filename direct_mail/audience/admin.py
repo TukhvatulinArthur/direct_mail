@@ -1,9 +1,11 @@
 from django.contrib import admin
-from treebeard.admin import TreeAdmin
-from treebeard.forms import movenodeform_factory
+
 from .models import Audience
 
-class MyAdmin(TreeAdmin):
-    form = movenodeform_factory(Audience)
+from treebeard.admin import TreeAdmin
+from treebeard.forms import movenodeform_factory
 
-admin.site.register(Audience, MyAdmin)
+
+@admin.register(Audience)
+class AudienceAdmin(TreeAdmin):
+    form = movenodeform_factory(Audience)

@@ -1,1 +1,27 @@
 {% extends "base.html" %}
+
+{% block content %}
+  <hr>
+  <div class="row">
+    <div class="col-xs-4 col-md-4 ccol-sm-3">
+      <h3>Рассылка писем</h3>
+      <p>Рассылка писем, коммерческих предложений, рекламы, по отдельно взятому городу или области, либо по всему
+        Казахстану, с функцией фильтрации адресатов.</p>
+      <p>
+        Вы можете загрузить свой материал и мы его распечатаем, принести уже готовые письма либо воспользоваться
+        конструктором письма, персонализировав ваше сообщение.
+      </p>
+      <p class="align-center">
+        <a href={% url "delivery_letter:type-list" %}>
+          <button class="btn btn-primary">Создать рассылку</button>
+        </a>
+      </p>
+    </div>
+    <div class="col-xs-4 col-md-4 ccol-sm-3">Service 2</div>
+    <div class="col-xs-4 col-md-4 ccol-sm-3">Service 3</div>
+
+    <!-- Add the extra clearfix for only the required viewport -->
+    <div class="clearfix visible-xs-block"></div>
+
+  </div>
+{% endblock %}

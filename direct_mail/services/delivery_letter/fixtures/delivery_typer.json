@@ -1,0 +1,29 @@
+[
+  {
+    "model": "delivery_letter.DeliveryType",
+    "pk": 1,
+    "fields": {
+      "name": "Распечатать и разослать",
+      "price": 65,
+      "description": "описание что такое Распечатать и разослать"
+    }
+  },
+  {
+    "model": "delivery_letter.DeliveryType",
+    "pk": 2,
+    "fields": {
+      "name": "Только разослать",
+      "price": 45,
+      "description": "описание что такое Только разослать"
+    }
+  },
+  {
+    "model": "delivery_letter.DeliveryType",
+    "pk": 3,
+    "fields": {
+      "name": "Создать письмо и разослать",
+      "price": 75,
+      "description": "описание что такое Создать письмо и разослать"
+    }
+  }
+]
