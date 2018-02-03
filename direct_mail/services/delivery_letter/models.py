@@ -15,6 +15,8 @@ class Letter(models.Model):
     file = models.FileField()
     delivery_type = models.ForeignKey(DeliveryType, default=1)
     audience = models.ManyToManyField(Audience)
-    customer = models.OneToOneField(User, default=2)
+    customer = models.ForeignKey(User, default=1)
+
+    total_price = models.IntegerField(null=True, blank=True)
     date_created = models.DateTimeField(auto_now_add=True, null=True)
 

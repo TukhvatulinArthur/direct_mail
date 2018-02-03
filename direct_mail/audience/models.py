@@ -5,6 +5,7 @@ from treebeard.mp_tree import MP_Node
 
 class Audience(MP_Node):
     name = models.CharField(max_length=30)
+    number = models.IntegerField(default=1)
 
     node_order_by = ['name']
 
