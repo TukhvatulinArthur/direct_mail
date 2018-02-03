@@ -12,7 +12,7 @@ class DeliveryType(models.Model):
         return self.name
 
 class Letter(models.Model):
-    file = models.FileField()
+    file = models.FileField(null=True, blank=True)
     delivery_type = models.ForeignKey(DeliveryType, default=1)
     audience = models.ManyToManyField(Audience)
     customer = models.ForeignKey(User, default=1)
