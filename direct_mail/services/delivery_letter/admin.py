@@ -10,4 +10,5 @@ class DeliveryTypeAdmin(admin.ModelAdmin):
 
 @admin.register(Letter)
 class LetterAdmin(admin.ModelAdmin):
-    pass
+    list_display = ['customer', 'date_created']
+    list_filter = ['customer']
